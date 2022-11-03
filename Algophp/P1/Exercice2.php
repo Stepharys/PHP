@@ -7,8 +7,10 @@
 <?php
 
 $phrase = "Notre formation DL commence aujourd'hui";
+
+//Connaitre le nb de mots dans la phrase
 $nbMots = str_word_count($phrase);
-//echo "La phrase « $phrase » contient $nbMots mots<br>";
+
 echo "La phrase « $phrase » contient ". str_word_count($phrase). " mots.<br>"; 
 
 ?>

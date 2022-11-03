@@ -6,15 +6,21 @@
 
 <?php
 
+//Affiché la phrase 
 $phrase = "Engage le jeu que je le gagne";
+
+//Mettre la pharse en minuscule
 $phrase = strtolower($phrase);
-$reversed = strrev($phrase);
 
-$phraseArray = array();
-$pharseArray = str_split($phrase);
+//Remplace les espaces par rien
+$replace = str_replace(" ","", $phrase);
 
-if ($phrase == $reversed)  {
-    echo "$pharse  est palindrome";
+//inversé les caracteres ex: ABCD >DCBA
+$reversed = strrev($replace);
+
+
+if ($replace == $reversed)  {
+    echo "$phrase  est palindrome";
 } else {
     echo "$phrase n'est pas un palindrome";
 }
