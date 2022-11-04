@@ -10,5 +10,4 @@ Attention, la valeur générée devra être arrondie à 2 décimales.
 
 intval(mixed $conv, int $$mfranc = 100): int
 
-
 ?>
