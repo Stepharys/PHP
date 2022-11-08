@@ -8,19 +8,16 @@ Attention, la valeur générée devra être arrondie à 2 décimales.
 
 <?php
 
-echo "Montant en franc :";
-echo "<br>100 francs =";
-
-
+$francs =100;
 $converFR_EU = 0.15244902;
 
-$francs =100;
-
+//------multiplié 2 variable
 $resultat = $francs * $converFR_EU;    
 
-echo $resultat
+//-----Arrondir a 2 décimales
+$resultat = number_format($resultat, 2);
 
-
-
+echo "Montant en franc : " .$francs;
+echo "<br>100 francs = " .$resultat;
 
 ?>
