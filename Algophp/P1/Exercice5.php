@@ -8,6 +8,19 @@ Attention, la valeur générée devra être arrondie à 2 décimales.
 
 <?php
 
-intval(mixed $conv, int $$mfranc = 100): int
+echo "Montant en franc :";
+echo "<br>100 francs =";
+
+
+$converFR_EU = 0.15244902;
+
+$francs =100;
+
+$resultat = $francs * $converFR_EU;    
+
+echo $resultat
+
+
+
 
 ?>
