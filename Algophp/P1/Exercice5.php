@@ -4,10 +4,13 @@
 Attention, la valeur générée devra être arrondie à 2 décimales.
 </p>
 
-<h2>Résultat</h2>
+<h1>Exercice 5</h1>
 
 <?php
 
-intval(mixed $conv, int $$mfranc = 100): int
+$nbprompt = 7;
+$Fconversion = 6.55957;
+$result = $nbprompt*$Fconversion ;
+echo "Montant en francs : " .$nbprompt. "<br>&#8614; " .$nbprompt = number_format($result,2). "€";
 
 ?>
