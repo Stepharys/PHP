@@ -8,13 +8,11 @@ Ecrire un algorithme permettant de compter le nombre de caractères contenus dan
 
 <?php
 
+//Connaitre le nb de caractere dans la phrase
 $phrase = "Notre formation DL commence aujourd'hui";
 
-//Connaitre le nb de caractere dans la phrase
 $longueur = strlen($phrase);
 
-
-echo "La phrase « $phrase » contient $longueur caractères.<br>";
-
+echo "La phrase « $phrase » contient $longueur caractères.";
 
 ?>
