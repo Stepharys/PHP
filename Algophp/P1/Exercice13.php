@@ -15,8 +15,6 @@ foreach ($notes as $note) {
     
     $i +=1;
 
-    echo 
-
 }
 
 echo "Sa moyenne générale est donc de :";
