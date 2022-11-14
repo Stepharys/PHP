@@ -16,10 +16,10 @@ count($langue);
 
     var_dump($langue);
      for ($i =1 ; $i <=var_dump($langue); $i++ ){
-        if 
+        $langue[$i][""] 
      }
    
-   
+   echo $i == $langue 
 
 ?>
 
