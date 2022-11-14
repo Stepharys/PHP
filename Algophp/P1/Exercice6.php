@@ -8,6 +8,6 @@ $TVA = 0.2 ;
 echo "Prix unitaire de l’article: $price €<br>
     Quantité: $quantity<br>
     Taux de TVA: $TVA<br>
-    Le montant de la facture à régler est de :" .$price*$quantity*(1-$TVA)." €";
+    Le montant de la facture à régler est de :" .$price*$quantity*(1+$TVA)." €";
 
 ?>
