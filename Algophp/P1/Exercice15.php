@@ -21,22 +21,17 @@ class Personne{
     public function getBirthday(){
         return $this->_birthday;
     }
-
 };
 
+function getAge($date) { 
+   $anniv = date_create($date);
+   $timetoday = date_create();
+   $age = date_diff($anniv, $timetoday);
+        return $age;
+} 
 $p1= new Personne("DUPONT","Michel","1980-02-19");
 $p2= new Personne("DUCHEMIN","Alice","1985-01-17");
 
-echo $p1->getPrenom()." ".$p1->getName()." a ".$p1->getBirthday()." ans<br>";
-echo $p2->getPrenom()." ".$p2->getName()." a ".$p2->getBirthday()." ans";
-
-$dob = strtotime(str_replace("/", "-", $p1));
-$tdate = time();
-echo date('Y', $tdate) - date('Y', $dob);
-
-$dob = strtotime(str_replace("/", "-", $birthday));
-$tdate = time();
-echo date('Y', $tdate) - date('Y', $dob);
-
-
+echo $p1->getPrenom()." ".$p1->getName()." a ".getAge($p1->getBirthday())." ans<br>";
+echo $p2->getPrenom()." ".$p2->getName()." a ".getAge($p2->getBirthday())." ans";
 ?>
