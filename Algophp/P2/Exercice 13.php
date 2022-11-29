@@ -52,6 +52,7 @@ class Voiture{
         }
     }
 };
+//Crée les information de la voiture
 $v1 = New Voiture("Peugeot","408","5");
 $v2 = New voiture("Citroen","C4","3");
     
