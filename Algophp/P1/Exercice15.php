@@ -29,4 +29,14 @@ $p2= new Personne("DUCHEMIN","Alice","1985-01-17");
 
 echo $p1->getPrenom()." ".$p1->getName()." a ".$p1->getBirthday()." ans<br>";
 echo $p2->getPrenom()." ".$p2->getName()." a ".$p2->getBirthday()." ans";
+
+$dob = strtotime(str_replace("/", "-", $p1));
+$tdate = time();
+echo date('Y', $tdate) - date('Y', $dob);
+
+$dob = strtotime(str_replace("/", "-", $birthday));
+$tdate = time();
+echo date('Y', $tdate) - date('Y', $dob);
+
+
 ?>
