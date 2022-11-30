@@ -57,11 +57,30 @@ class Voiture{
     //*Mes fonction
     public function Demarrer(){
         if($this->_status == "demarrer"){
+            $this->
             echo "Le véhicule ".$this->getMarque()." ".$this->getModele()." démarre<br>";
         }else{
             echo "stopper";
         }
     }
+
+    public function Demarrer(){
+        if($this->_status == "demarrer"){
+            echo "Le véhicule ".$this->getMarque()." ".$this->getModele()." démarre<br>";
+        }else{
+            echo "stopper";
+        }
+    }
+
+    public function Demarrer(){
+        if($this->_status == "demarrer"){
+            echo "Le véhicule ".$this->getMarque()." ".$this->getModele()." démarre<br>";
+        }else{
+            echo "stopper";
+        }
+    }
+
+
 };
 //Crée les information de la voiture
 $v1 = New Voiture("Peugeot","408","5");
