@@ -16,6 +16,8 @@ class Voiture{
         $this->_marque = $marque;          //Initialisation de la marque
         $this->_modele = $modele;          //Initialisation du modele
         $this->_nbPortes = $nbPortes;      //Initialisation du nombre de portes
+        $this->_vitesseActuelle = 0;       //Initialisation de la vitesse actuelle 
+        $this->_status = false;            //Initialisation du status actuelle 
     }
 
     //*GET accesseurs(Recupéperer)
@@ -28,6 +30,12 @@ class Voiture{
     public function getNbPortes(){
         return $this->_nbPortes;
     }
+    public function getVitesseActuelle(){
+        return $this->_vitesseActuelle;
+    }
+    public function getStatus(){
+        return $this->_status;
+    }
 
     //*SET mutateurs(Modifié)
     public function setMarque($marque){
@@ -39,10 +47,13 @@ class Voiture{
     public function setNbPortes($nbPortes){
         $this->_nbPortes=$nbPortes;
     }
-
+    public function setVitesseActuelle($vitesseActuelle){
+        $this->_vitesseActuelle=$vitesseActuelle;
+    }
     public function setStatus($status){
         $this->_status=$status;
     }
+
     //*Mes fonction
     public function Demarrer(){
         if($this->_status == "demarrer"){
