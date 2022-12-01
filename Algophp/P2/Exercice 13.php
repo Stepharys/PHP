@@ -64,16 +64,16 @@ class Voiture{
         }
     }
 
-    public function Demarrer(){
-        if($this->_status == "demarrer"){
-            echo "Le véhicule ".$this->getMarque()." ".$this->getModele()." démarre<br>";
+    public function Accelerer(){
+        if($this->_status == "accelerer"){
+            echo "Le véhicule ".$this->getMarque()." ".$this->getModele()." accélère ".$this->getVitesseActuelle().;
         }else{
             echo "stopper";
         }
     }
 
-    public function Demarrer(){
-        if($this->_status == "demarrer"){
+    public function Stopper(){
+        if($this->_status == "stopper"){
             echo "Le véhicule ".$this->getMarque()." ".$this->getModele()." démarre<br>";
         }else{
             echo "stopper";
@@ -85,8 +85,15 @@ class Voiture{
 //Crée les information de la voiture
 $v1 = New Voiture("Peugeot","408","5");
 $v2 = New voiture("Citroen","C4","3");
-    
-
 $v1->setStatus("demarrer");
+
+public function Demarrer(){
+    if($this->_status == "demarrer"){
+        $this->
+        echo "Le véhicule ".$this->getMarque()." ".$this->getModele()." démarre<br>";
+    }else{
+        echo "stopper";
+    }
+}
 
 ?>
