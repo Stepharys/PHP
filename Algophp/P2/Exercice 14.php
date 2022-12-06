@@ -6,15 +6,17 @@ class Voiture{
     private $_marque; 
     private $_modele; 
 
-class VoitureElec extends autonomie{
+}
+
+class VoitureElec extends Autonomie{
 
 public function __construct($marque, $modele){
     
-    $this->_marque = $marque;
+    parent::_construct($marque);
     $this->_modele = $modele;
     }
 } 
-}
+
 public function getMarque(){
     return $this->_marque;
 }
