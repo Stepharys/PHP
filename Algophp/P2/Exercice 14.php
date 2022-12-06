@@ -6,6 +6,19 @@ class Voiture{
     private $_marque; 
     private $_modele; 
 
+    public function __construct($marque, $modele)
+
+        $this->_marque = $marque;
+        $this->modele = $marque;
+
+    public function getMarque(){
+        return $this->_marque;
+    }
+    public function  getModele(){
+        return $this->modele;
+    }
+
+    echo echo "Le véhicule ".$this->getMarque()." ".$this->getModele().
 }
 
 class VoitureElec extends Autonomie{
@@ -16,13 +29,7 @@ public function __construct($marque, $modele){
     $this->_modele = $modele;
     }
 } 
-
-public function getMarque(){
-    return $this->_marque;
-}
-public function getModele(){
-    return $this->_modele;
-}
+echo Autonomie::combien();
 
 $v1 = new Voiture("Peugeot","408");
 $ve1 = new VoitureElec("BMW","I3",100);
