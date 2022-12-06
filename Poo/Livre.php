@@ -28,7 +28,7 @@ public function getPrix(){
 }
 
 public function getInfoLivre(){
-    echo $this->getTitle()." ".$this->getYears()." : ".$this->getParution()." pages / ".$this->getPrix();
+    echo $this->getTitle()." (".$this->getYears().") : ".$this->getParution()." pages / ".$this->getPrix()"€";
 }
 }
 
