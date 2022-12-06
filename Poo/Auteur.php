@@ -33,5 +33,6 @@ public function setPrenom($prenom){
 public function setNom($nom){
     $this->_nom = $nom;
 }
+}
 
 ?>
