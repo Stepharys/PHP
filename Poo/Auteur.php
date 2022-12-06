@@ -3,12 +3,14 @@
 class Auteur{
 private $_prenom;
 private $_nom;
+private $_livre;
 
 //construir la fonction auteur
-public function __construct($prenom, $nom){
+public function __construct(string $prenom, string $nom){
 
     $this->_prenom = $prenom;
     $this->_nom = $nom;
+    $this->_livre = [];
 }
 
 
@@ -19,12 +21,17 @@ public function getPrenom(){
 public function getNom(){
     return $this->_nom;
 }
-
-Public function getInfoAuteur(){
-    echo "Livres de ".$this->getInfoAuteur();
-}
+public function getLivre(){
+    return $this->_livre;
 }
 
-$Aut = new personne("Stephen","King");
+//set
+
+public function setPrenom($prenom){
+    $this->_prenom = $prenom;
+}
+public function setNom($nom){
+    $this->_nom = $nom;
+}
 
 ?>
