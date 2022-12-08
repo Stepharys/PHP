@@ -25,9 +25,9 @@ public function getLivre(){
     return $this->_livres;
 }
 public function afficherBibliographie(){
-    echo "Livres de ".$this."<br>";
-    foreach ($_livres as $livre= => $auteur) {
-        # code...
+    echo "Livres de ".$this."<br><br>";
+    foreach ($this->_livres as $livre) {
+       echo $livre."<br>";
     }
 }
 public function TabBook($livre){

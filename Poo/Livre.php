@@ -16,6 +16,7 @@ public function __construct($title, $parution, $pages, $prix, Auteur $auteur){
     $this->_prix = $prix;
     $this->_auteur = $auteur;
     $this->_auteur->tabBook($this);
+
 }
 
 //get
@@ -48,10 +49,9 @@ public function setPrix($prix){
 
 
 //affichage d'information
-public function getInfoLivre(){
-    echo $this->getTitle()." (".$this->getParution().") : ".$this->getPages()." pages / ".$this->getPrix()."€";
+public function __toString(){
+    return $this->getTitle()." (".$this->getParution().") : ".$this->getPages()." pages / ".$this->getPrix()."€";
 }
-
 }
 
 ?>
