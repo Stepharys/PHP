@@ -15,6 +15,7 @@ public function __construct($libellé, $soldeInitial, $deviseMonetaire, Titulair
     $this->_titulaireUnique = $titulaireUnique;
     $this->_titulaireUnique->tabTitulaire($this);
 }
+
 //get
 public function getLibellé(){
     return $this->_libellé;
