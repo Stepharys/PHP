@@ -16,7 +16,6 @@ public function __construct($nom, $prenom, $birthday, $city){
     $this->_city = $city;
     $this->_bankAcccount = [];
 }
-
 //get
 public function getNom(){
     return $this->_nom;
