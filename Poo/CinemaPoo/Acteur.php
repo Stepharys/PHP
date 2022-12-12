@@ -1,31 +1,28 @@
 <?php
-class Actor extends Person
+class Acteur extends Personne
 {
     private $_castings;
 
-    public function __construct($lastname, $firstname, $sexe, $dateofbirth)
+    public function __construct($lastname, $firstname, $sexe, $birthday)
     {
-        parent::__construct($lastname, $firstname, $sexe, $dateofbirth);
+        parent::__construct($lastname, $firstname, $sexe, $birthday);
         $this->_castings=[];
     }
-    function getFilmographie()
-    {
-        foreach ($this->_castings as $film)
-        {
-            return $film->getMovie()->getTitle()."<br>";
+
+    //get
+    function getFilmographie(){
+        foreach ($this->_castings as $film){
+        return $film->getMovie()->getTitle()."<br>";
         }
     }
 
-    public function addcasting($newcasting)
-    {
+    public function addcasting($newcasting){
         $this->_castings [] = $newcasting;
     }
 
-    public function getCasting()
-    {
-        foreach ($this->_castings as $casting) 
-        {
-            echo $casting->getActor() ." a joué ". $casting->getRole()."<br>";
+    public function getCasting(){
+        foreach ($this->_castings as $casting){
+        //echo $casting->getActeur() ." a joué ". $casting->getRole()."<br>";
         }
 }
 }
