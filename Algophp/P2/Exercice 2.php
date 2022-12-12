@@ -22,7 +22,7 @@ function afficherTableHTML($table) {
 }
 
 $capitales = [
-    "France" =>"Londre",
+    "France" =>"Paris",
     "Allemagne" =>"Berlin",
     "USA" =>"Washington",
     "Italie" =>"Rome"
