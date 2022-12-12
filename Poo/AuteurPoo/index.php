@@ -11,6 +11,6 @@ $Li3 = new Livre("Le Fléau",1978,823,14,$Aut);
 $Li4 = new Livre("Shining",1977,447,16,$Aut);
 
 $Aut->afficherBibliographie();
-var_dump($Li1);
+
 
 ?>

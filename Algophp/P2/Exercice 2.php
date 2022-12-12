@@ -3,7 +3,7 @@
 <?php
 
 function afficherTableHTML($table) {
-    echo "<table border= '1'>
+    echo "<table border= '10'>
             <thead>
                 <tr>
                     <th>Pays</th>
@@ -11,6 +11,7 @@ function afficherTableHTML($table) {
                 </tr>
             </thead>
             <tbody>";
+            
     foreach ($table as $pays => $cap) {
         echo "<tr>
                 <td> $pays </td>

@@ -1,5 +1,5 @@
 <?php
-class Acteur extends Personne
+class Acteur extends Personnage
 {
     private $_castings;
 
@@ -22,7 +22,8 @@ class Acteur extends Personne
 
     public function getCasting(){
         foreach ($this->_castings as $casting){
-        //echo $casting->getActeur() ." a joué ". $casting->getRole()."<br>";
+        echo "L'acteur".$casting->getActeur() ." a joué ". $casting->getRole()."<br>";
         }
 }
 }
+

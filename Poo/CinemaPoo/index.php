@@ -4,17 +4,19 @@ spl_autoload_register(function($class_name){
     require_once $class_name . '.php';
 });
 
-$b1 = new acteur("Michael","Keaton","man",'05/09/1951');
-$b2 = new acteur("Val","Kilmer","man",'31/12/1959');
-$b3 = new acteur("George","Clooney","man",'06/05/1961');
+$ba1 = new personnage("Michael","Keaton","man",'05/09/1951');
+$ba2 = new personnage("Val","Kilmer","man",'31/12/1959');
+$ba3 = new personnage("George","Clooney","man",'06/05/1961');
 
-$c1 = new acteur("Harrison","Ford","man",'13/06/1942');
-$c2 = new acteur("Mark","Hamill","man",'25/09/1951');
+$sw1 = new personnage("Harrison","Ford","man",'13/06/1942');
+$sw2 = new personnage("Mark","Hamill","man",'25/09/1951');
 
-$r1 = new role("Batman")
-$r2 = new role("Han Solo")
-$r3 = new role("Luke skywalker")
+$ro1 = new Role("Batman");
+$ro2 = new Role("Han Solo");
+$ro3 = new Role("Luke skywalker");
 
 $action = new genreCiné("action");
 $aventure = new genreCiné("aventure");
 $Sf = new genreCiné("science-fiction");
+
+?>
