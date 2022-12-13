@@ -2,5 +2,9 @@
 
 class Casting{
 
-    private string $_;
+    private Role $_role;
+    private Acteur $_acteur;
+    private Film $_films;
+
+  
 }
