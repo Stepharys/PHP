@@ -1,7 +1,7 @@
 <?php
-class Acteur extends Personnage
-{
-    private $_castings;
+class Acteur extends Human{
+
+
 
     public function __construct($lastname, $firstname, $sexe, $birthday)
     {
