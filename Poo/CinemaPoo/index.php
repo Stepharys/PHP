@@ -12,8 +12,8 @@ spl_autoload_register(function($class_name){
 //$aSw2 = new acteur("Mark","Hamill","man",'25/09/1951');
 
 $rBa = new Realisateur("Tim","Burton","man",'25/08/1958');
-
 $action = new Genre("action");
+$fi1 = new Film("Batman","05/04/2001",120,$action,$rBa,"lol");
 
 //$rSw = new Realisateur("Bob","Rob","man",'15/12/1965');
 
@@ -26,7 +26,12 @@ $action = new Genre("action");
 
 //$aBa1->getCasting();
 
-//echo $rBa->getLastName();
+//echo $rBa->getCasting();
 //echo $action;
-$fi1 = new Film("Batman","05/04/2001",120,$action,$rBa,"lol");
+
+
+
+
+
+
 ?>

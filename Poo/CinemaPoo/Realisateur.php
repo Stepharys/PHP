@@ -1,23 +1,31 @@
 <?php
 class Realisateur extends Human
 {
-    $private string $_film;
+    private $_films;
+    private $_casting;
 
     public function __construct($lastname, $firstname, $sexe, $birthday)
     {
         parent::__construct($lastname, $firstname, $sexe, $birthday);
         $this->_castings=[];
+        $this->_films=[];
     }
 
     //get
     function getFilmographie(){
-        foreach ($this->_castings as $film){
-        return $film->getMovie()->getTitle()."<br>";
+        foreach ($this->_castings as $films){
+        return $films->getMovie()->getTitle()."<br>";
         }
+    }
+    public function getFilms(){
+        return $this->_films;
     }
 
     public function addcasting($newcasting){
         $this->_castings [] = $newcasting;
+    }
+    public function addfilm($newfilm){
+        $this->_films [] = $newfilm;
     }
 
     public function getCasting(){
@@ -25,4 +33,5 @@ class Realisateur extends Human
         echo "L'acteur".$casting->getActeur() ." a joué ". $casting->getRole()."<br>";
         }
 }
+
 }

@@ -1,32 +1,31 @@
 <?php
-class Human 
-{
-    private $_castings;
+class Human {
+
     private $_lastname;
     private $_firstname;
     private $_sexe;
     private $_birthday;
 
+
     public function __construct($lastname, $firstname, $sexe, $birthday){
-        
-        parent::__construct($lastname, $firstname, $sexe, $birthday);
-        $this->_castings=[];
+      
+        $this->_lastname = $lastname;
+        $this->_firstname = $firstname;
+        $this->_sexe = $sexe;
+        $this->_birthday = $birthday;
     }
 
-    //get
-    function getFilmographie(){
-        foreach ($this->_castings as $film){
-        return $film->getMovie()->getTitle()."<br>";
-        }
-    }
-
-    public function addcasting($newcasting){
-        $this->_castings [] = $newcasting;
-    }
-
-    public function getCasting(){
-        foreach ($this->_castings as $casting){
-        echo "L'acteur".$casting->getActeur() ." a joué ". $casting->getRole()."<br>";
-        }
-}
+   //get
+   public function getLastName(){
+    return $this->_lastname;
+   }
+   public function getFirstName(){
+    return $this->_firstname;
+   }
+   public function getSexe(){
+    return $this->_sexe;
+   }
+   public function getBirthday(){
+    return $this->_birthday;
+   }
 }
