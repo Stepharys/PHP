@@ -1,8 +1,15 @@
 <?php
 
 class genre{
-    private string $_sf;
-    private string $_action;
-    private string $_aventure;
-    
+    private string $_name;
+    private string $_film;
+
+    public function __construct($name){
+        $this->_film=[];
+    }
+
+    //get
+    function getFilmByGenre(){
+        
+    }
 }
