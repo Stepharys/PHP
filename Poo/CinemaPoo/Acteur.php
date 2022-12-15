@@ -10,7 +10,7 @@ class Acteur extends Human{
     }
 
     //get
-    function getFilmographie(){
+    public function getFilmographie(){
         foreach ($this->_casting as $film){
         return $film->getMovie()->getTitle()."<br>";
         }
@@ -26,4 +26,5 @@ class Acteur extends Human{
         }
 }
 }
+?>
 

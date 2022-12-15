@@ -14,18 +14,18 @@ class Realisateur extends Human
     //get
     function getFilmographie(){
         foreach ($this->_castings as $films){
-        return $films->getMovie()->getTitle()."<br>";
+        return $films->getFilms()->getTitle()."<br>";
         }
     }
     public function getFilms(){
         return $this->_films;
     }
 
-    public function addcasting($newcasting){
+    public function addCasting($newcasting){
         $this->_castings [] = $newcasting;
     }
-    public function addfilm($newfilm){
-        $this->_films [] = $newfilm;
+    public function TabFilm($film){
+        $this->_films [] = $film;
     }
 
     public function getCasting(){
@@ -33,5 +33,5 @@ class Realisateur extends Human
         echo "L'acteur".$casting->getActeur() ." a joué ". $casting->getRole()."<br>";
         }
 }
-
 }
+?>

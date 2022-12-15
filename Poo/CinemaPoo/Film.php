@@ -6,7 +6,7 @@ class Film{
     private int $_time;
     private Realisateur $_realisateur;
     private string $_synopsis;
-    private $_casting;
+    private array $_casting;
     private Genre $_genre;
 
     public function __construct($title, $date, $time, Genre $genre, Realisateur $realisateur, $synopsis){
@@ -18,8 +18,8 @@ class Film{
         $this->_realisateur = $realisateur;
         $this->_synopsis = $synopsis;
         $this->_casting = [];
-        $this->_realisateur->addfilm($this);
-        $this->_genre->addfilm($this);
+        $this->_realisateur->Tabfilm($this);
+        $this->_genre->Tabfilm($this);
     }
 
     //get
@@ -46,3 +46,4 @@ class Film{
     }
 
 }
+?>

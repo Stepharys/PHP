@@ -29,3 +29,4 @@ class Human {
     return $this->_birthday;
    }
 }
+?>

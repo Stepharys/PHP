@@ -10,22 +10,26 @@ class Genre{
     }
 
     //get
-    function getFilmsByGenre(){
-        
-    }
-
+    
     public function getName(){
         return $this->_name;
     }
     public function getFilms(){
         return $this->_films;
     }
-    public function addfilm($newfilm){
-        $this->_films [] = $newfilm;
+    public function getFilmsByGenre(){
+        echo "La categorie des films ".$this." comporte :<br><br>";
+        foreach ($this->_films as $film) {
+           echo $film->getTitle()."<br>";
+}
+}
+    public function Tabfilm($film){
+        $this->_films[]= $film;
     }
-
+    
     //affichage d'information
     public function __toString(){
-        return $this->getFilms().$this->getTitle()." est un film d'".$this->getName();
+        return $this->getName();
     }
 }
+?>
