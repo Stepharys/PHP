@@ -20,7 +20,8 @@ class Realisateur extends Human
     public function getFilms(){
         return $this->_films;
     }
-
+    
+    //tableau
     public function addCasting($newcasting){
         $this->_castings [] = $newcasting;
     }
@@ -28,6 +29,7 @@ class Realisateur extends Human
         $this->_films [] = $film;
     }
 
+    //affichage 
     public function getCasting(){
         foreach ($this->_castings as $casting){
         echo "L'acteur".$casting->getActeur() ." a joué ". $casting->getRole()."<br>";

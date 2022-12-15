@@ -17,19 +17,23 @@ class Genre{
     public function getFilms(){
         return $this->_films;
     }
-    public function getFilmsByGenre(){
-        echo "La categorie des films ".$this." comporte :<br><br>";
-        foreach ($this->_films as $film) {
-           echo $film->getTitle()."<br>";
-}
-}
     public function Tabfilm($film){
         $this->_films[]= $film;
     }
     
-    //affichage d'information
+    //Affichage
+    public function getFilmsByGenre(){
+        echo "La categorie des films ".$this." comporte :<br><br>";
+        foreach ($this->_films as $film) {
+           echo $film->getTitle()."<br>";
+        }
+        echo"<br>";
+    }
+    //toString
     public function __toString(){
         return $this->getName();
     }
 }
 ?>
+    
+    

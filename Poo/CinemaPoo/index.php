@@ -4,17 +4,18 @@ spl_autoload_register(function($class_name){
     require_once $class_name . '.php';
 });
 //Acteur
-$A1 = new acteur("Michael","Keaton","man",'05/09/1951');
-$A2 = new acteur("Val","Kilmer","man",'31/12/1959');
-$A3 = new acteur("George","Clooney","man",'06/05/1961');
+$A1 = new Acteur("Michael","Keaton","man",'05/09/1951');
+$A2 = new Acteur("Val","Kilmer","man",'31/12/1959');
+$A3 = new Acteur("George","Clooney","man",'06/05/1961');
 
-$a1 = new acteur("Harrison","Ford","man",'13/06/1942');
-$a2 = new acteur("Mark","Hamill","man",'25/09/1951');
+$a1 = new Acteur("Harrison","Ford","man",'13/06/1942');
+$a2 = new Acteur("Mark","Hamill","man",'25/09/1951');
+$a3 = new Acteur("Luc","Sky","man",'05/12/1971');
 
 //genre
 $action = new Genre("action");
 $aventure = new Genre("aventure");
-$Sf = new Genre("science-fiction");
+//$Sf = new Genre("science-fiction");
 
 //realisateur
 $R1 = new Realisateur("Tim","Burton","man",'25/08/1958');
@@ -37,6 +38,15 @@ $ro4 = new Role("Roberto");
 $ro5 = new Role("Lucia");
 $ro6 = new Role("Homme blanc");
 
+//Casting
+$C1 = new Casting($ro1, $A1, $Fi1);
+$C2 = new Casting($ro2, $A2, $Fi2);
+$C3 = new Casting($ro3, $A3, $Fi3);
+$C4 = new Casting($ro4, $a1, $fi1);
+$C5 = new Casting($ro5, $a2, $fi2);
+$C6 = new Casting($ro6, $a3, $fi3);
+
+
 
 //$aBa1->getCasting();
 
@@ -44,6 +54,9 @@ $ro6 = new Role("Homme blanc");
 //var_dump($action);
 
 $action->getFilmsByGenre();
+$aventure->getFilmsByGenre();
+$C1->getCastingFromFilm();
+
 //$aventure->get
 //$Sf->get
 
