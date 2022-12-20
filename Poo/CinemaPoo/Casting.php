@@ -24,12 +24,6 @@ public function getActeur(){
 }
 public function getFilms(){
     return $this->_films;
-}
-public function getListCasting(){
-    echo "La categorie des films ".$this." comporte :<br><br>";
-    foreach ($this->_films as $film) {
-       echo $film->getTitle()."<br>";
-}
-}
+}  
 }
 ?>
