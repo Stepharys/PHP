@@ -55,7 +55,7 @@ $C6 = new Casting($ro6, $a3, $fi3);
 
 $action->getFilmsByGenre();
 $aventure->getFilmsByGenre();
-$C1->getCastingFromFilm();
+$C1->getListCasting();
 
 //$aventure->get
 //$Sf->get

@@ -45,11 +45,18 @@ class Film{
         return $this->_casting;
     }
 
-//affichage 
+//Affichage 
     public function getFilmInfo(){
         foreach ($this->_casting as $casting){
         echo "L'acteur".$casting->getActeur() ." a joué ". $casting->getRole()."<br>";
         }
     }
+
+    public function getListCasting(){
+        echo "Dans le film ".$this."  "." a été incarné par  :<br><br>";
+        foreach ($this->_casting as $casting) {
+           echo $casting->getCasting()."<br>";
+           }
+        } 
 }
 ?>
