@@ -1,46 +1,65 @@
 <?php
 
-class Personnage{
+class Personnage
+{
+    private string $_nom;
+    private string $_prenom;
+    private  $_anniversaire;
+    private Pays $_pays;
+    private array $_carriere;
 
-Private $_firstname;
-private $_lastname
-private $_age;
+    public function __construct(string $nom, string $prenom, $anniversaire,  pays $pays)
+    {
+        $this->_nom = $nom;
+        $this->_prenom = $prenom;
+        $this->_anniversaire =  new DateTime ($anniversaire);
+        $this->_pays = $pays;
+        $this->_carrieres = [];
+    }
 
+    public function addCarriere($carriere)
+    {
+        $this->_carrieres[] = $carriere;
+    }
 
-public function __construct($title, $date, $time, Genre $genre, Realisateur $realisateur, $synopsis){
+    public function getNom()
+    {
+        return $this->_nom;
+    }
 
-    $this->_title = $title;
-    $this->_date = $date;
-    $this->_time = $time;
-    $this->_genre = $genre;
-    $this->_realisateur = $realisateur;
-    $this->_synopsis = $synopsis;
-    $this->_casting = [];
-    $this->_realisateur->Tabfilm($this);
-    $this->_genre->Tabfilm($this);
-}
+    public function getPrenom()
+    {
+        return $this->_prenom;
+    }
+ 
+    public function getAnniversaire()
+    {
+        return $this->_anniversaire;
+    }
 
-//get
-public function getTitle(){
-    return $this->_title;
-}
-public function getDate(){
-    return $this->_nom;
-}
-public function getTime(){
-    return $this->_time;
-}
-public function getRealisateur(){
-    return $this->_réalistateur;
-}
-public function getsynopsis(){
-    return $this->_synopsis;
-}
-public function getGenre(){
-    return $this->_genre;
-}
-public function getCasting(){
-    return $this->_casting;
-}
+        public function getPays()
+    {
+        return $this->_Pays;
+    }
 
+    public function Age(){
+        $today= new DateTime();
+        $anniversaire = ($this->_anniversaire);
+        $diff = date_diff($anniversaire, $today);
+        return $diff->format("%y ans");
+    }
+
+    public function __toString()
+    {
+        return " Nom du Joueur: ". $this->getNom(). " //"." Prénom: ".$this->getPrenom(). " //". " Age: ". $this->Age();
+    } 
+
+  
+    public function afficherInfo()
+   {
+       foreach ($this->_carrieres as $carriere)
+       {
+           echo $carriere."<br>";
+       }
+   }
 }

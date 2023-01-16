@@ -1,6 +1,6 @@
 <?php
 
-class Nationalité{
+class Carriere{
     
         protected $_name;
         protected $_players;
@@ -20,9 +20,9 @@ class Nationalité{
         public function setName($name){
             $this->_name = $name;
         }
-        public function setNationality($nationality){
-            $this->_nationality = $nationality;
-        } 
+        // public function setNationality($nationality){
+        //     $this->_nationality = $nationality;
+        // } 
     
         public function addPlayer($player){
             array_push($this->_players,$player);

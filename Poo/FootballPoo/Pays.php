@@ -1,44 +1,54 @@
 <?php
 
-class Pays{
+class Pays 
+{
+    private string $_pays;
+    private array $_carriere;
 
-Private $_nom;
 
-public function __construct($title, $date, $time, Genre $genre, Realisateur $realisateur, $synopsis){
-
-    $this->_title = $title;
-    $this->_date = $date;
-    $this->_time = $time;
-    $this->_genre = $genre;
-    $this->_realisateur = $realisateur;
-    $this->_synopsis = $synopsis;
-    $this->_casting = [];
-    $this->_realisateur->Tabfilm($this);
-    $this->_genre->Tabfilm($this);
+public function __construct(string $pays) 
+{
+    $this->_pays = $pays;
+    $this->_equipes = [];
+    $this->_carrieres = [];
 }
 
-//get
-public function getTitle(){
-    return $this->_title;
+public function addEquipe($equipe) 
+{
+    $this->_equipes[] = $equipe;
+    
 }
-public function getDate(){
-    return $this->_nom;
+
+public function getPays() 
+{
+    return $this->_pays;
 }
-public function getTime(){
-    return $this->_time;
-}
-public function getRealisateur(){
-    return $this->_réalistateur;
-}
-public function getsynopsis(){
-    return $this->_synopsis;
-}
-public function getGenre(){
-    return $this->_genre;
-}
-public function getCasting(){
-    return $this->_casting;
+
+public function getEquipe() 
+{
+    return $this->_equipe;
 }
 
 
+public function __toString() 
+{
+    return $this->getPays();
+}
+
+public function addCarriere($carriere)
+{
+    foreach($this->carrieres as $carriere)
+    {
+        return $carriere."<br>";
+    }
+}
+
+public function afficherEquipe()
+{
+    echo " La liste des équipes du pays : ". $this." sont :<br>";
+    foreach ($this->_equipes as $equipe) 
+    {
+        echo $equipe."<br>";
+    }
+}
 }

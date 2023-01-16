@@ -13,10 +13,14 @@ $P5 = new Personnage("gord","Gop","28 ans","Germany");
 
 //Club
 $c1 = new Club("Psg");
-$c2 = new Club("Psg");
-$c3 = new Club("Psg");
-$c4 = new Club("Psg");
-$c5 = new Club("Psg");
-$c6 = new Club("Psg");
-$c7 = new Club("Psg");
-$c8 = new Club("Psg");
+$c2 = new Club("Lion");
+$c3 = new Club("Marseille");
+$c4 = new Club("Racing");
+$c5 = new Club("Dijon");
+//$c6 = new Club("Psg");
+//$c7 = new Club("Psg");
+//$c8 = new Club("Psg");
+
+
+
+
