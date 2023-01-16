@@ -8,18 +8,18 @@ class Personnage
     private Pays $_pays;
     private array $_carriere;
 
-    public function __construct(string $nom, string $prenom, $anniversaire,  pays $pays)
+    public function __construct(string $nom, string $prenom, $anniversaire, Pays $pays)
     {
         $this->_nom = $nom;
         $this->_prenom = $prenom;
         $this->_anniversaire =  new DateTime ($anniversaire);
         $this->_pays = $pays;
-        $this->_carrieres = [];
+        $this->_carriere = [];
     }
 
     public function addCarriere($carriere)
     {
-        $this->_carrieres[] = $carriere;
+        $this->_carriere[] = $carriere;
     }
 
     public function getNom()
@@ -39,7 +39,7 @@ class Personnage
 
         public function getPays()
     {
-        return $this->_Pays;
+        return $this->_pays;
     }
 
     public function Age(){
@@ -51,15 +51,16 @@ class Personnage
 
     public function __toString()
     {
-        return " Nom du Joueur: ". $this->getNom(). " //"." Prénom: ".$this->getPrenom(). " //". " Age: ". $this->Age();
+        return " Nom: ". $this->getNom(). " //"." Prénom: ".$this->getPrenom(). " //". " Age: ". $this->Age(). " //". " Pays: ";
     } 
 
   
     public function afficherInfo()
    {
-       foreach ($this->_carrieres as $carriere)
+       foreach ($this->_carriere as $carriere)
        {
            echo $carriere."<br>";
        }
    }
 }
+?>

@@ -3,10 +3,11 @@
 class Pays 
 {
     private string $_pays;
-    private array $_carriere;
+    private array $_equipes;
+    private array $_carrieres;
 
 
-public function __construct(string $pays) 
+public function __construct( $pays) 
 {
     $this->_pays = $pays;
     $this->_equipes = [];
@@ -26,7 +27,7 @@ public function getPays()
 
 public function getEquipe() 
 {
-    return $this->_equipe;
+    return $this->_equipes;
 }
 
 
@@ -35,9 +36,9 @@ public function __toString()
     return $this->getPays();
 }
 
-public function addCarriere($carriere)
+public function addCarriere($carrieres)
 {
-    foreach($this->carrieres as $carriere)
+    foreach($this->_carrieres as $carriere)
     {
         return $carriere."<br>";
     }
@@ -52,3 +53,4 @@ public function afficherEquipe()
     }
 }
 }
+?>

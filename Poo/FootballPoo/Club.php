@@ -4,7 +4,7 @@ class Club
 {
     private string $_equipe;
     private Pays $_pays;
-    private array $_carriere;
+    private array $_carrieres;
 
 
 public function __construct(string $equipe, Pays $pays)
@@ -18,7 +18,7 @@ public function __construct(string $equipe, Pays $pays)
 
 public function addCarriere($carriere) 
 {
-    $this->_carriere[] = $carriere;
+    $this->_carrieres[] = $carriere;
     
 }
 
@@ -32,10 +32,10 @@ public function getPays()
     return $this->_pays;
 }
 
-// public function getCarriere() 
-// {
-//     return $this->_carriere;
-// }
+ public function getCarriere() 
+ {
+     return $this->_carrieres;
+ }
 
 public function __toString() 
 {
@@ -51,3 +51,4 @@ public function afficherInfoEquipe()
     }
 }
 }
+?>
