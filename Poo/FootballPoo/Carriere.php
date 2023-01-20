@@ -2,13 +2,15 @@
 
 class Carriere{
     
-        protected $_name;
-        protected $_players;
-        protected $_nationality;
-            
-        public function __construct(string $name){
-            $this->_name = $name;
-            $this->_players = [];
+        protected Personnage $_players;
+        protected Club $_club;
+        protected $_recrutement;
+
+        //construct
+        public function __construct(Personnage $player, Club $club, $recrutement){
+            $this->_player = $player;
+            $this->_club = $club;
+            $this->_recrutement = [];
         }
                 
         //GET
