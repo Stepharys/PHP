@@ -24,6 +24,8 @@ spl_autoload_register(function($class_name){
 // $Ca1 = new Carriere("cris");
 
 // $Ca1->afficherInfo();
+
+ $E1->afficherEquipe();
 ?>
 
 
